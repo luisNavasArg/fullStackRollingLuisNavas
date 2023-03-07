@@ -1,0 +1,20 @@
+/* selector de etiqueta
+sdsdsd */
+
+nav{
+    width: 250px;
+    background-color: rgba(0, 0, 255, 0.218);
+}
+main{
+    background-color: rgba(0, 255, 255, 0.163);
+}
+/*selector de id*/
+#introduccion{
+    background-color: rgba(0, 0, 0, 0.273);
+    color: white;
+}
+/*selector de clase*/
+.azul{
+    background-color: rgba(0, 0, 255, 0.489);
+}
+

@@ -1,0 +1,43 @@
+/*selector{nombre:valor}*/
+*{
+    font-family:'Courier New', Courier, monospace;
+    font-size: small;
+}
+body{
+    background-color: rgba(137, 43, 226, 0.416);
+}
+nav{
+    border: 3px dotted black;
+}
+table,td,th{
+    border: 3px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+td,th{
+    width: 150px;
+}
+thead{
+    background-color: black;
+    color: white;
+}
+
+th{
+    text-align: left;
+}
+th{
+    text-align: center;
+
+}
+#blue{
+    background-color: blue;
+    color:white
+}
+.otroColor{
+    background-color: purple;
+    color: white;
+}
+h2{
+    width: 150px;
+    background-color: rgba(165, 42, 42, 0.367);
+}
