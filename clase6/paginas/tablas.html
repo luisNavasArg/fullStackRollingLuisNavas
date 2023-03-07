@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tablas y formularios</h1>
+    </header>
+    <nav>
+        <ul type="none">
+            <li><a href="../index.html" class="otroColor">Inicio</a></li>
+            <li><a href="./formularios.html">Formularios</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Tabla # 1 Usuarios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th class="otroColor">Curso</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Luis</td>
+                        <td>Navas</td>
+                        <td>50</td>
+                        <td>Full Stack</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Tabla #2 Cursos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Duración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>004</td>
+                        <td id="blue">Html 5</td>
+                        <td>5 Clases</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>008</td>
+                        <td>Css</td>
+                        <td>6 Clases</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2 class="otroColor">Tabla de prueba</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Nombre Completo</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Juan</td>
+                        <td>Lopez</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>Rodriguez</td>
+                        <td>30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+/*selector{nombre:valor}*/
+*{
+    font-family:'Courier New', Courier, monospace;
+    font-size: small;
+}
+body{
+    background-color: rgba(137, 43, 226, 0.416);
+}
+nav{
+    border: 3px dotted black;
+}
+table,td,th{
+    border: 3px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+td,th{
+    width: 150px;
+}
+thead{
+    background-color: black;
+    color: white;
+}
+
+th{
+    text-align: left;
+}
+th{
+    text-align: center;
+
+}
+#blue{
+    background-color: blue;
+    color:white
+}
+.otroColor{
+    background-color: purple;
+    color: white;
+}
+h2{
+    margin: 15px auto;
+    box-shadow: 2px 2px 8px black;
+    text-align: center;
+    width: 20%;
+    background-color: rgba(165, 42, 42, 0.367);
+}
+form{
+    background-color: rgba(137, 43, 226, 0.358);
+    padding: 15px;
+    color: white;
+    /*border: 5px solid black;*/
+    margin: auto;
+    width: 300px;
+    
+}
+label{
+    display: block;
+}
+div{
+    padding: 8px;
+    margin: 5px 0px;
+    border: 3px solid rgba(0, 0, 0, 0.388);
+    box-shadow: 2px 2px 8px black;
+}
+/*Propiedades de forma
+width ancho
+height : alto
+background:color fondo
+border
+color
+padding
+*/
+/*Unidadesde medidas
+cm, mm,in px,pt,pc
+*/
+
+
