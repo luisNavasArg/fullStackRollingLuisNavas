@@ -1,0 +1,132 @@
+*{
+   margin: 0px;
+}
+#principal{
+  
+   width: 40%;
+   height: 200px;
+   background-color: aquamarine;
+
+}
+#uno{
+   padding: 10px;
+   box-sizing: border-box;
+   width: 25%;
+   float: right;
+   height: 50px;
+   background-color: black;
+}
+#dos{
+   padding: 10px;
+   box-sizing: border-box;
+   width: 25%;
+   float: right;
+   height: 25%;
+   background-color: blueviolet;
+}
+#tres{
+   padding: 10px;
+   box-sizing: border-box;
+   width: 25%;
+   float: right;
+   height: 25%;
+   background-color:pink;
+}
+#cuatro{
+   padding: 10px;
+   box-sizing: border-box;
+   width: 25%;
+   float: right;
+   height: 25%;
+   background-color: yellow;
+}
+.fijo{
+   position: fixed;
+   top: 10px;
+}
+li{
+   display: inline;
+   background-color: black;
+   color: white;
+   margin: 2px;
+}
+#absoluta{
+   width: 40vw;
+   height: 80vh;
+   background-color: rgba(127, 255, 212, 0.502);
+}
+#cinco{
+   padding: 10px;
+   box-sizing: border-box;
+   width: 10vw;
+   float: right;
+   height: 25vh;
+   background-color:pink;
+}
+#seis{
+   padding: 10px;
+   box-sizing: border-box;
+   width: 10vw;
+   float: right;
+   height: 25vh;
+   background-color:red;
+}
+#siete{
+   padding: 10px;
+   box-sizing: border-box;
+   width: 10vw;
+   float: right;
+   height: 25vh;
+   background-color:orangered;
+}
+#ocho{
+   padding: 10px;
+   box-sizing: border-box;
+   width: 10vw;
+   float: right;
+   height: 25vh;
+   background-color:pink;
+}
+/*Posicionamiento*/
+#posAbsoluta{
+   position: absolute;
+   top: 0px;
+   background-color: rgba(0, 0, 0, 0.509);
+   width: 100vw;
+   height: 100vh;
+   z-index: 1;
+   display: flex;
+   /* flex-direction:column-reverse; */
+   /* justify-content:center; */
+   /* justify-content:space-between; */
+    justify-content:space-around;
+   /* justify-content:center; */
+   /* flex-wrap:nowrap; */
+}
+.cuadro{
+   width: 300px;
+   height: 300px;
+   background-color: chartreuse;
+}
+footer{
+   position: sticky;
+   background-color: blue;
+   padding: 20px;
+   bottom: 0px;
+   text-align: center;
+   z-index: 0;
+}
+img{
+   /* border-radius: 50px; */
+   box-shadow: 25px 25px 20px;
+}
+nav{
+   background-color: blueviolet;
+   position: fixed;
+}
+header{
+   background-image: url('../../clase3/img/header.jpeg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 200px;
+}
