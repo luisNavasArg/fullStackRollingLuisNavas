@@ -1,0 +1,47 @@
+*{
+   margin: 0px;
+   padding: 0px;
+   /* background-color: rgba(72, 68, 68, 0.221); */
+}
+.contentItemCard{
+   border: 5px solid black;
+   height: 400px;
+   text-align: center;
+   overflow: hidden;
+}
+.itemCa{
+   height: 100%;
+   position: relative;
+}
+.tarjetaCa{
+   display: flex;
+   justify-content: center;
+}
+.flechas{
+   height: 100%;
+   position: absolute;
+   top: 0px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   /* padding: 20px; */
+
+}
+.izq{
+   width: 0px;
+   height: 0px;
+   border-bottom: 30px solid transparent;
+   border-top: 30px solid transparent;
+   border-right: 60px solid red;
+}
+.der{
+   width: 0px;
+   height: 0px;
+   border-bottom: 30px solid transparent;
+   border-top: 30px solid transparent;
+   border-left: 60px solid red;
+}
+img{
+   width: 50%;
+}
