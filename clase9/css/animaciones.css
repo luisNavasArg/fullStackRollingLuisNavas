@@ -59,6 +59,7 @@ section{
 :root{
    --my-colorFondo:rgba(255, 0, 0, 0.349);
    --posi-inicial:1000px;
+   --border:5px solid pink;
 }
 h1{
    position: relative;
@@ -66,7 +67,8 @@ h1{
    animation-name: miAnimacion;
    animation-duration: 10s; 
    /* Usamos la variable */
-   background-color: var(--my-colorFondo);
+   color: var(--my-colorFondo);
+   border:var(--border)
 }
  ul li a:hover{
    animation-name: menu;
@@ -81,6 +83,7 @@ h1{
       box-shadow: 4px 5px 8px black;
    }
 }
+/*dEFINIMOS LA ANIMACIÓN*/
 @keyframes otraManera {
    0%{background-color: blue;}
    25%{background-color: yellowgreen;}
@@ -89,7 +92,7 @@ h1{
 }
 a:hover{
    animation-name: otraManera;
-   animation-duration: 13s;
+   animation-duration: 3s;
    animation-iteration-count: infinite;
 }
 
