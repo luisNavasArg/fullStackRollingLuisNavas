@@ -1,0 +1,24 @@
+*{margin:0px;padding: 0px;}
+body{
+    background-color: red;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+ }
+ article{
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    margin: 10px;
+ }
+@media (min-width:768px) {
+    body{
+        background-color: grey;
+    }
+}
+@media (min-width:1024px) {
+    body{
+        background-color: yellowgreen;
+    }
+}

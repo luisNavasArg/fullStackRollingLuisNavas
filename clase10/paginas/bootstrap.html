@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body class="bg-primary text-white">
+    <div class="">
+        <h2 class="text-center bg-dark p-3">Ancho en %</h2>
+        <div class="w-25 bg-secondary p-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate deserunt amet quam animi velit porro nam architecto unde obcaecati, consectetur exercitationem pariatur voluptas aspernatur ipsum officia possimus vitae? Nostrum, repellendus.
+        </div>
+        <div class="w-50 bg-danger p-5 m-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati animi porro excepturi ad eaque itaque dolor aliquid error architecto, perspiciatis accusantium ipsum quisquam, ab aut eum, illum recusandae eveniet eligendi?</div>
+        <div class="w-75 bg-info text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quam dignissimos aliquam maxime! Error ea incidunt consequuntur, quibusdam molestias delectus id totam voluptatibus aspernatur eveniet debitis at, culpa, quo libero.</div>
+    </div>
+
+    <div>
+        <h2 class="text-center bg-dark m-4 p-3">Sistema de grillas</h2>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5 p-4 m-5 bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tenetur unde quaerat vel atque id sapiente natus quos cum animi culpa alias accusamus maiores tempora odio perferendis, hic, tempore vitae.</div>
+                <div class="col-5 p-4 m-5 bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ratione, illo illum autem reprehenderit quae atque at fugit? Laudantium excepturi tempore autem et dolore sint odit veniam minima adipisci harum?</div>
+            </div>
+            <div class="row">
+                <div class="col-3 bg-dark text-white p-4 m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tenetur unde quaerat vel atque id sapiente natus quos cum animi culpa alias accusamus maiores tempora odio perferendis, hic, tempore vitae.</div>
+                <div class="col-3 bg-dark text-white p-4 m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ratione, illo illum autem reprehenderit quae atque at fugit? Laudantium excepturi tempore autem et dolore sint odit veniam minima adipisci harum?</div>
+                
+                <div class="col-3 bg-dark text-white p-4 m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ratione, illo illum autem reprehenderit quae atque at fugit? Laudantium excepturi tempore autem et dolore sint odit veniam minima adipisci harum?</div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-2 bg-dark text-white p-4 m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tenetur unde quaerat vel atque id sapiente natus quos cum animi culpa alias accusamus maiores tempora odio perferendis, hic, tempore vitae.</div>
+                <div class="col-2 bg-dark text-white p-4 m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ratione, illo illum autem reprehenderit quae atque at fugit? Laudantium excepturi tempore autem et dolore sint odit veniam minima adipisci harum?</div>
+                <div class="col-2 bg-dark text-white p-4 m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ratione, illo illum autem reprehenderit quae atque at fugit? Laudantium excepturi tempore autem et dolore sint odit veniam minima adipisci harum?</div>
+                <div class="col-2 bg-dark text-white p-4 m-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ratione, illo illum autem reprehenderit quae atque at fugit? Laudantium excepturi tempore autem et dolore sint odit veniam minima adipisci harum?</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>Carrousel</h2>
+        <section class="d-flex justify-content-center">
+        <div id="carouselExampleControls" class="carousel slide ancho" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../../clase9/img/IMG_00850.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../../clase9/img/IMG_00851.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../../clase9/img/IMG_00852.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+    </div>
+    <div></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

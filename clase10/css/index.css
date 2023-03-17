@@ -1,3 +1,4 @@
+/*desktop first*/
 *{margin:0px;padding: 0px;}
 body{
    background-image: url('../img/spider-man-marvel-avengers-10921.webp');
@@ -14,6 +15,7 @@ article{
    background-color: blue;
    margin: 10px;
 }
+/*tablet*/
 @media (max-width:768px) {
    section{
       display: block;
@@ -23,6 +25,7 @@ article{
    }
    
 }
+/*mobile*/
 @media (max-width:420px) {
    section{
       display: block;
