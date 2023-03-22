@@ -1,0 +1,9 @@
+div .col-6{
+    background-color: rgba(137, 43, 226, 0.413);
+    border: 1px solid black;
+    box-sizing: border-box;
+    /* opacity:0.2; */
+}
+.pink{
+    background-color: pink;
+}
