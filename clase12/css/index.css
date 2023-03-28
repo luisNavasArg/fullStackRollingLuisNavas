@@ -1,0 +1,77 @@
+body{
+    padding: 15px;
+}
+header{
+    height: 250px;
+    /* background-color: rgba(183,0,255,0.2); */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6Rod6Zv5NUMyCPUzTpMMcA8Ib4LlDQL6w4g&usqp=CAU');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav{
+    border-radius: 10px 10px 0px 0px;
+}
+.dark{
+    background-color: rgba(183, 0, 255, 0.551);
+}
+main{
+    background: linear-gradient(45deg,rgba(255, 0, 0, 0.222),rgba(0, 0, 255, 0.219),rgba(0, 128, 0, 0.289),rgba(0, 0, 0, 0.276));
+    border-radius:0px 0px 10px 10px ;
+    background-size: 400% 400%;
+    position: relative;
+    animation: cambiarColor 12s ease infinite;
+}
+
+@keyframes cambiarColor {
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+    
+}
+.row div{
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.324);
+    color: white;
+    text-align: center;
+    margin: 3px;
+}
+.arco{
+    background: linear-gradient(
+           45deg,
+           rgba(255, 0, 0, 0.359),
+           rgba(0, 0, 255, 0.487),
+           rgba(0, 128, 0, 0.419),
+           rgba(0, 0, 0, 0.375)
+           );
+           padding: 5px;
+           border: 1px solid black;
+           border-radius: 10px;
+animation: rainbow-animation 2s linear infinite;
+}
+
+@keyframes rainbow-animation {
+to{
+filter: hue-rotate(0deg);
+}
+from{
+filter: hue-rotate(360deg);
+}
+}
+.aside{
+    background-color: blueviolet;
+
+}
+.seccion{
+    /* background-color: rgba(165, 42, 42, 0.361); */
+}
+ul {
+    list-style-type: none;
+    margin-top: 8px;
+}
+a{
+    text-decoration: none;
+    color:white;
+    padding: 4px;
+    margin: 2px;
+    background-color: rgba(255, 0, 0, 0.428);
+}

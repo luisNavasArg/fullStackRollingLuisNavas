@@ -1,0 +1,38 @@
+Cuarta clase
+● Cards
+○ https://getbootstrap.com/docs/4.0/components/card/
+○ Grid cards
+● Pastillas de texto - Badges insignias
+○ https://getbootstrap.com/docs/4.0/components/badge/
+● Contenedor de ancho completo
+○ Container-fluid
+■ https://getbootstrap.com/docs/4.0/layout/overview/#containers
+● Link externo formato botón
+● Formularios
+○ https://getbootstrap.com/docs/4.0/components/forms/
+
+extra
+   <style>
+      button{
+         background: linear-gradient(
+                45deg,
+                rgba(255, 0, 0, 0.359),
+                rgba(0, 0, 255, 0.487),
+                rgba(0, 128, 0, 0.419),
+                rgba(0, 0, 0, 0.375)
+                );
+                padding: 5px;
+                border: 1px solid black;
+                border-radius: 10px;
+  animation: rainbow-animation 2s linear infinite;
+}
+
+@keyframes rainbow-animation {
+  to{
+    filter: hue-rotate(0deg);
+  }
+ from{
+    filter: hue-rotate(360deg);
+  }
+}
+   </style>
