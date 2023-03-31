@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.naranja{
+    background-color: var(--bs-yellow) ;
+    height: 60px;
+}
+.lima{
+    background-color: var(--bs-teal);
+    height: 40px;
+}
+.azul{
+    background-color: var(--bs-blue);
+    height: 180px;
+}
+.gris{
+    background-color: var(--bs-gray-400);
+    height: 90px;
+    border: 2px solid white;
+}
+/*tablet*/
+@media (min-width:768px) {
+    .lima{
+        height: 80px;
+    }
+    .azul{
+        height: 90px;
+    }
+}
+/* desktop */
+@media (min-width:992px) {
+    .lima{
+        height: 120px;
+    }
+    .azul{
+        height: 180px;
+    }
+}
