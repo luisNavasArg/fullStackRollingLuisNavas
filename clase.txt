@@ -36,3 +36,41 @@ extra
   }
 }
    </style>
+   en grupos 
+1. Agregar a todos los miembros del equipo al github del proyecto módulo 1
+2. Que cada uno clone el proyecto localmente y cree una rama con su
+nombre
+3. Subir la rama creada al repo remoto.
+
+
+Equipo 1
+PROCESO
+1. Ir a la cocina
+2. Tomar una taza
+3. Lavar una taza
+4. Secar la taza
+5. Dejar la taza en la mesa
+6. Sacar la cafetera del lugar donde esta guardada
+7. Dejar la cafetera en la mesa
+8. Buscar el café molido en donde este guardado
+9. Tomar una cuchara del lugar donde este
+10. Usar la cuchara par tomar el café
+11. Agregar café molido a la cafetera al gusto
+12. Tomar una tasa
+13. Llenar la taza de agua
+14. Agregar agua a la cafetera
+15. Conectar a la corriente eléctrica la cafetera
+16. Encender la cafetera
+17. Esperar a que el café este listo
+18. Tomar el recipiente donde esta el café (
+  en donde la cafetera vierte el café para poder servirlo)
+19. Servir el café en la taza
+20. Tomar una cuchara para agregar azúcar al gusto
+21. Tomar una cuchara para agregar crema para café
+22. Mezclar el café con una cuchara
+23. Beber el café a la temperatura que le guste y con tranquilidad
+
+
+
+SALIDA
+Un delicioso café
