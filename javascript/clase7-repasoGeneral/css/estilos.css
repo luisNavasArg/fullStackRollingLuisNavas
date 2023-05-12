@@ -1,0 +1,19 @@
+.verde{
+    background-color: rgba(172, 255, 47, 0.64); /*agregar !important*/
+}
+.rojo{
+    background-color: red;
+}
+.container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.mesa {
+    margin: 5px;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    text-align: center;
+    color: white;
+}
