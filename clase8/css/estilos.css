@@ -1,0 +1,130 @@
+* {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+body {
+    margin: 0px;
+    padding: 8px;
+}
+
+main {
+    position: relative;
+    background-image: url('../img/fondo.png');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 500px;
+
+}
+
+.verde {
+    background-color: rgba(172, 255, 47, 0.64) !important;
+    /*agregar !important*/
+}
+
+.rojo {
+    background-color: red;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    flex-wrap: wrap;
+    
+
+}
+
+.container::before {
+    background-color: rgba(0, 0, 0, 0.434);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* content: " "; */
+
+}
+
+.btn {
+    padding: 5px;
+    background-color: black;
+    color: white;
+    width: max-content;
+    cursor: pointer;
+    border-radius: 0px 15px;
+    margin-top: 5px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.mesa {
+    margin: 5px;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    text-align: center;
+    color: white;
+}
+
+.logo {
+    width: 40px;
+}
+
+header {
+    border-radius: 10px 10px 0px 0px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.end {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.start {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li {
+    display: inline;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+}
+.btn:hover{
+    transform: rotateX(10deg);
+}
+footer {
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+}
