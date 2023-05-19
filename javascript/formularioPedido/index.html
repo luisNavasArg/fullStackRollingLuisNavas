@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Formulario de Pedido</title>
+</head>
+<body>
+  <h1>Formulario de Pedido</h1>
+  <form id="pedidoForm">
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+    </div>
+    <div>
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" required>
+    </div>
+    <div>
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" required>
+    </div>
+    <div>
+      <label for="entrada">Entrada:</label>
+      <textarea id="entrada"></textarea>
+    </div>
+    <div>
+        <label for="plato Principal">Plato Principal:</label>
+        <textarea id="plato Principal" required></textarea>
+    </div>
+    <div>
+      <label for="postre">Postre:</label>
+      <textarea id="postre"></textarea>
+  </div>
+    <button type="submit"><strong>Realizar Pedido</strong></button>
+  </form>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.container{
+    width: 70%;
+    height: 100vh;
+    background-color: black;
+
+}
+.pixel{
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    color: white;
+    float: left;
+}
