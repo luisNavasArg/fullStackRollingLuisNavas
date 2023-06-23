@@ -1,12 +1,26 @@
+import { useState } from 'react'
 import MyButton from './MyButton'
-const MyFom =()=>{
+const MyForm =({setList,list})=>{
+    const [item,setItem]=useState();
+    const agregarItem=(e)=>{
+        e.preventDefault();
+        setList([...list,item])
+        setItem("")
+        e.target[0].value=""
+    }
     return(
-        <form>
-            <input  type="text" name="" id="" placeholder="Agregá una tearea"/>
+        <form onSubmit={agregarItem}>
+            <input  
+            type="text" 
+            name="" 
+            id="" 
+            placeholder="Agregá una tearea"
+            onChange={(event)=>setItem(event.target.value)}
+            />
             <br/>
             <MyButton text="Añadir tarea" color="blue"/>
         </form>
         
     )
 }
-export default MyFom
+export default MyForm

@@ -1,12 +1,13 @@
+import { useState } from 'react'
 import './App.css'
 import Home from './components/Home'
 
-function App() { 
-  
 
+function App() { 
+  const [list,setList]=useState([]);
   return (
     <>
-     <Home />
+     <Home list={list} setList={setList}/>
     </>
   )
 }

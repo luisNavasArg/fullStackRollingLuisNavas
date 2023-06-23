@@ -1,9 +1,8 @@
 import MyItem from "./MyItem"
-const MyList =()=>{
+const MyList =({list})=>{
     return(
         <ul>
-            <MyItem text="Ir al Cine"/> 
-            <MyItem text="Comprar Pochoclos"/> 
+            {list.map((item,i)=><MyItem key={`${i}item`} text={item}/> )}
         </ul>
     )
 }

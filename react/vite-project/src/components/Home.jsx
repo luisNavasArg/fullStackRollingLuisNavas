@@ -1,11 +1,11 @@
 import MyForm from './MyForm'
 import MyList from './MyList'
-const Home=()=>{
+const Home=({list,setList})=>{
     return(
         <div>
             <h1>Mi lista de tareas</h1>
-            <MyForm/>
-            <MyList></MyList>
+            <MyForm list={list} setList={setList}/>
+            <MyList list={list}></MyList>
         </div>
     )
 
