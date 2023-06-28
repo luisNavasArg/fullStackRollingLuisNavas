@@ -1,36 +1,29 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import MyCarousel from "./components/MyCarousel";
+import Section from "./components/Section";
 function App() {
-  const [count, setCount] = useState(0)
-
+  //desestructuración de array [variable, método]
+  const [activo,setActivo]=useState(false);
+  const data = [
+    {id:"SuperOferta",text:"Lleva tres libros y pagas 2",
+    titulo:"Aprovecha la super oferta", precio:15000},
+    {id:"Fascinante",text:"Lleva dos libros y pagas 1",
+    titulo:"Aprovecha la Oferta", precio:10000},
+    {id:"Imperdible",text:"Lleva 5 libros y pagas 3",
+    titulo:"Aprovecha la extra Oferta", precio:35000}
+  ];
   return (
     <>
-      <div style={{backgroundColor:"blue"}}>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <button onClick={() => setCount((count) => count - 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Nav  ids={["SuperOferta","Fascinante","Imperdible"]}></Nav>
+      <MyCarousel/>
+      {data.map(s=><Section activo={activo} id={s.id} text={s.text} titulo={s.titulo} precio={s.precio}/>)}
+      
+     <Footer></Footer>
     </>
   )
 }

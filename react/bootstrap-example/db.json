@@ -1,0 +1,40 @@
+{
+  "ofertas": [
+    {
+      "id": 1,
+      "id_oferta": "SuperOferta",
+      "text": "Lleva tres libros y pagas 2",
+      "titulo": "Aprovecha la super oferta",
+      "precio": 15000
+    },
+    {
+      "id": 2,
+      "id_oferta": "Fascinante",
+      "text": "Lleva dos libros y pagas 1",
+      "titulo": "Aprovecha la Oferta",
+      "precio": 10000
+    },
+    {
+      "id": 3,
+      "id_oferta": "Imperdible",
+      "text": "Lleva 5 libros y pagas 3",
+      "titulo": "Aprovecha la extra Oferta",
+      "precio": 35000
+    },
+    {
+      "id_oferta": "Finde de oferta",
+      "text": "Lleva 10 y pagas 3",
+      "titulo": "¿Aprovechamos la oferta?",
+      "precio": 15000,
+      "id": 4
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "Luis",
+      "email": "lpipnav",
+      "password": "123456"
+    }
+  ]
+}
