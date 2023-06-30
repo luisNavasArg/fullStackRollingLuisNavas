@@ -8,7 +8,7 @@ function ColorSchemesExample(props) {
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
           <Nav className="me-auto">
-            {props.ids.map(id=><Nav.Link href={`#${id}`}>{id}</Nav.Link>)}
+            {props.ids.map((id,index)=><Nav.Link key={`nav${index}`} href={`#${id}`}>{id}</Nav.Link>)}
           </Nav>
         </Container>
       </Navbar>

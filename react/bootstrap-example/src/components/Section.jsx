@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Section = (props) => {
-    console.log(props.activo);
+    
     
   return (
     <section style={{height:"350px"}} className='d-flex justify-content-center'>
