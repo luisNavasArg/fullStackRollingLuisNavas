@@ -1,0 +1,81 @@
+{
+  "users": [],
+  "products": [
+    {
+      "name": "Chocolate blanco",
+      "descripction": "Barra de chocolate con chispas de arroz crujientes",
+      "price": 1500,
+      "id": 1
+    },
+    {
+      "name": "Chocolate 100% Cacao",
+      "descripction": "Barra de chocolate con 100% Cacao",
+      "price": 1700,
+      "id": 2
+    },
+    {
+      "{\"name\":\"Chocolate con Naranja\",\"descripction\":\"Barra de chocolate con Naranja\",\"price\":1200}": "",
+      "id": 3
+    },
+    {
+      "{\"name\":\"Chocolate con Naranja\",\"descripction\":\"Barra de chocolate con Naranja\",\"price\":1200}": "",
+      "id": 4
+    },
+    {
+      "{\"name\":\"Chocolate con Naranja\",\"descripction\":\"Barra de chocolate con Naranja\",\"price\":1200}": "",
+      "id": 5
+    },
+    {
+      "{\"name\":\"Chocolate con Naranja\",\"descripction\":\"Barra de chocolate con Naranja\",\"price\":1200}": "",
+      "id": 6
+    },
+    {
+      "name": "Chocolate con Naranja",
+      "descripction": "Barra de chocolate con Naranja",
+      "price": 1200,
+      "id": 7
+    },
+    {
+      "name": "Chocolate con Naranja",
+      "descripction": "Barra de chocolate con Naranja",
+      "price": 1200,
+      "id": 8
+    },
+    {
+      "name": "Chocolate con Naranja",
+      "descripction": "Barra de chocolate con Naranja",
+      "price": 1200,
+      "id": 9
+    },
+    {
+      "name": "Chocolate con Naranja",
+      "descripction": "Barra de chocolate con Naranja",
+      "price": 1200,
+      "id": 10
+    },
+    {
+      "name": "Chocolate con Naranja",
+      "descripction": "Barra de chocolate con Naranja",
+      "price": 1200,
+      "id": 11
+    },
+    {
+      "name": "Chocolate con Naranja",
+      "descripction": "Barra de chocolate con Naranja",
+      "price": 1200,
+      "id": 12
+    },
+    {
+      "name": "Chocolate con Naranja",
+      "descripction": "Barra de chocolate con Naranja",
+      "price": 1200,
+      "id": 13
+    },
+    {
+      "name": "Chocolate con Naranja",
+      "descripction": "Barra de chocolate con Naranja",
+      "price": 1200,
+      "id": 14
+    }
+  ]
+}
