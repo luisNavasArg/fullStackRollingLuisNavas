@@ -1,5 +1,7 @@
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
+import {methPostUsers} from '../helpers/index'
+
 
 const Register = () => (
   <div>
@@ -12,7 +14,7 @@ const Register = () => (
       }}
       onSubmit={async (values) => {
         await new Promise((r) => setTimeout(r, 500));
-       console.log(values);
+        methPostUsers(values);
       }}
     >
       <Form>
