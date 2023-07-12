@@ -1,11 +1,20 @@
 {
   "users": [
     {
+      "admin":false,
       "firstName": "luis ramon",
       "lastName": "Navas Alvarado",
       "email": "pipnavas@gmail.com",
-      "password": "142536",
+      "password": "LuisNavas1",
       "id": 1
+    },
+    {
+      "admin":true,
+      "firstName": "Tutty",
+      "lastName": "Santochi",
+      "email": "santotutty@gmail.com",
+      "password": "Tuutysantoci01",
+      "id": 2
     }
   ],
   "products": [

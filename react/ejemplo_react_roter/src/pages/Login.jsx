@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, FormControl, FormGroup } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form'
 import {useForm} from 'react-hook-form'
-const Login = () => {
+import {ingresar} from '../helpers/index'
+import Swal from 'sweetalert2'
+const Login = ({admin,setAdmin, MyUser,setUser,setIslogueado}) => {
   const {register,handleSubmit,formState:{errors},reset}=useForm();
+  
   const onSubmit =(user)=>{
-      console.log(user);
+      ingresar(user)
+      .then(data=>{
+        if(data.length==0){
+          Swal.fire('¡Usuario o contraseña incorrecto!')
+        }else{
+          setUser(data[0])
+          setAdmin(data[0].admin)
+          setIslogueado(true)
+        }
+      })
+     
   }
   return (
     <div>
@@ -26,13 +39,18 @@ const Login = () => {
           <Form.Text className="text-danger">
             {errors.email?.message}
           </Form.Text>
+        
         </FormGroup>
         <FormGroup>
           <Form.Label>Contraseña</Form.Label>
           <FormControl 
           type='password'
           {...register("password",{
-            required:"hay que llenar el campo de la contraseña!"
+            required:"hay que llenar el campo de la contraseña!",
+            pattern:{
+              value:/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/,
+              message:"La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito númerico, al menos una minúscula y al menos una mayúscula."
+            }
           })}
           
           />
