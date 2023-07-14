@@ -1,14 +1,19 @@
 import React from 'react'
+import {Navigate} from 'react-router-dom'
 import {Card} from 'react-bootstrap'
-const Productos = ({products}) => {
+const Productos = ({products,isLogueado}) => {
     
   return (
     <div>
+      {isLogueado?<>{products.map((p,index)=><p key={`product${index}`}>{p.name}</p>)}</>:
+      <Navigate to="/"/>}
     
-          {products.map(p=><p>{p.name}</p>)}
+          
       
     </div>
   )
 }
 
 export default Productos
+
+

@@ -9,9 +9,39 @@
 </head>
 <body>
    <a href="./clase9"> Clase 9</a>
+   <p style="color:red" id="error"></p>
    <script>
       let alumnos=["guada","Tutty","Agustín","Andres","Christian","Eric","Natalia","Pato","Rodrigo"]
       console.log(alumnos[Math.floor(Math.random()*alumnos.length)]);
+
+      let span = document.getElementById("error");
+     
+    const validarForm=(product)=>{
+        let errors ={};
+        if(product.name==""){
+            errors.message="El nombre es obligatorio"
+            span.innerText=errors.message;
+
+        }else if (product.descripction==""){
+            errors.message="La descrpción es obligatorio"
+            span.innerText=errors.message;
+        }else if(product.descripction.length < 6){
+            errors.message="La descrpción debe tener al menos tres palabras"
+            span.innerText=errors.message;
+        }else if (product.price==""){
+            errors.message="El precio es obligatorio"
+            span.innerText=errors.message;
+        }
+        else if (product.src==""){
+            errors.message="La Imagen obligatoria"
+            span.innerText=errors.message;
+        }else{
+           console.log("todos los datos fueron validados y no hay error");
+        }
+        
+
+    }
+    validarForm({name:"Hola mundo",descripction:"",price:"-1425",src:"fdsfdsfdsfsdf"});
    </script>
 </body>
 </html>

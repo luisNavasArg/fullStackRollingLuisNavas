@@ -11,15 +11,25 @@ import Productos from './pages/Productos'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {methPost,methGet} from './helpers/index'
 import {PrivateRoutes} from './components/PrivateRoutes'
+import AddProduct from './pages/AddProduct'
 function App() {
   const [products, setProducts] = useState([]);
   const [admin,setAdmin]=useState(false);
   const [user,setUser]=useState({});
   const [isLogueado,setIslogueado]=useState(false);
-  /*methPost({name:"Chocolate con Naranja", 
-  descripction:"Barra de chocolate con Naranja",
-  price:1200})*/
+  
+  const recuperoUser=()=>{
+    const usuario = JSON.parse(window.localStorage.getItem("user"));
+    if(usuario != null){
+      setUser(usuario)
+      setAdmin(usuario.admin)
+      setIslogueado(true)
+    }
+    
+
+  }
   useEffect(()=>{
+    recuperoUser()
     methGet()
     .then(data=>data.data)
     .then(response=>{
@@ -29,13 +39,20 @@ function App() {
     }else{
       console.log("no han llegado datos");
     }
+    
       
     })
   },[])
 
   return (
       <BrowserRouter>
-        <MyNav isLogueado={isLogueado} admin={admin}/>
+        <MyNav 
+          isLogueado={isLogueado} 
+          admin={admin}
+          setIslogueado={setIslogueado}
+          setAdmin={setAdmin}
+          setUser={setUser}
+          />
         <Routes>
           <Route exact path='/' element={<Home/>}/>
           <Route exact path='/login' element={
@@ -45,12 +62,14 @@ function App() {
                 admin={admin}
                 setAdmin={setAdmin}
                 setIslogueado={setIslogueado}
+                logueado={isLogueado}
                 />}/>
           <Route exact path='/register' element={<Register/>}/>
           <Route element={<PrivateRoutes admin={admin}/>}>
             <Route  path="/admin" element={<h1>Admin</h1>}/>
+            <Route path="/admin/addProduct" element={<AddProduct />}/>
           </Route>
-          <Route  path="/products" element={<Productos products={products}/>}/>
+          <Route  path="/products" element={<Productos isLogueado={isLogueado} products={products}/>}/>
 
           
         </Routes>
