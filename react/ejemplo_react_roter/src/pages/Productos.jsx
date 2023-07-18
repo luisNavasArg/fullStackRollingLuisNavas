@@ -1,16 +1,32 @@
-import React from 'react'
 import {Navigate} from 'react-router-dom'
-import {Card} from 'react-bootstrap'
+import {Card, ListGroup, Container} from 'react-bootstrap'
 const Productos = ({products,isLogueado}) => {
     
   return (
-    <div>
-      {isLogueado?<>{products.map((p,index)=><p key={`product${index}`}>{p.name}</p>)}</>:
+    <Container>
+      {isLogueado?<>
+      <Card className='m-3 mx-auto'>
+        <Card.Title>
+          Productos
+        </Card.Title>
+        <Card.Body>
+          <ListGroup >
+          {products.map((p,index)=><ListGroup.Item className='d-flex justify-content-around' key={`product${index}`}>
+            <Card.Img style={{width:"100px"}} src={p.src} />        
+            <Card.Title>{p.name}</Card.Title>
+            <Card.Text>{p.descripction}</Card.Text>
+            <Card.Text>$ {p.price}</Card.Text>
+            <Card.Link href='#'>Añadir la compra</Card.Link>
+            <Card.Link href={`/products/detail/${p.id}`}>Detalle</Card.Link>
+            </ListGroup.Item>)}
+          </ListGroup>
+        </Card.Body>
+
+      </Card>
+      </>:
       <Navigate to="/"/>}
-    
-          
       
-    </div>
+    </Container>
   )
 }
 

@@ -21,6 +21,14 @@ export const methPostUsers= async(obj)=>{
         console.log(error);
     }
 }
+export const methoGetOne=(id)=>{
+    try {
+        let productos =axios.get(`${URL_productos}/${id}`)
+        return productos;
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 export const  methGet=async()=>{
     try {

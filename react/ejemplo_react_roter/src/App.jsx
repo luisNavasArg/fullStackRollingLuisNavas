@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {methPost,methGet} from './helpers/index'
 import {PrivateRoutes} from './components/PrivateRoutes'
 import AddProduct from './pages/AddProduct'
+import ProductoDetail from './pages/ProductoDetail'
 function App() {
   const [products, setProducts] = useState([]);
   const [admin,setAdmin]=useState(false);
@@ -33,7 +34,7 @@ function App() {
     methGet()
     .then(data=>data.data)
     .then(response=>{
-    console.log(response.length);
+    
     if(response.length != 0){
       setProducts(response)
     }else{
@@ -70,6 +71,7 @@ function App() {
             <Route path="/admin/addProduct" element={<AddProduct />}/>
           </Route>
           <Route  path="/products" element={<Productos isLogueado={isLogueado} products={products}/>}/>
+          <Route  path="/products/detail/:id" element={<ProductoDetail isLogueado={isLogueado} products={products}/>}/>
 
           
         </Routes>

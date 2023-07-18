@@ -127,6 +127,14 @@
       "password": "125",
       "admin": false,
       "id": 16
+    },
+    {
+      "firstName": "luis ramon",
+      "lastName": "Navas Alvarado",
+      "email": "alejandroy@gmail.com",
+      "password": "122332",
+      "admin": false,
+      "id": 17
     }
   ],
   "products": [
@@ -150,18 +158,6 @@
       "price": 1200,
       "src": "https://okdiario.com/img/2020/12/12/tiras-naranja-confitada.jpg",
       "id": 14
-    },
-    {
-      "name": "Chocolate con Naranja",
-      "descripction": "Barra de chocolate con Naranja",
-      "price": 1200,
-      "id": 15
-    },
-    {
-      "name": "Otro chocolate",
-      "descripction": "uff",
-      "price": "1200",
-      "id": 16
     },
     {
       "name": "Chocolate con pasas",
