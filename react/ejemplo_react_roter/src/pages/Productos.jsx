@@ -1,7 +1,8 @@
 import {Navigate} from 'react-router-dom'
 import {Card, ListGroup, Container} from 'react-bootstrap'
-const Productos = ({products,isLogueado}) => {
-    
+import { useEffect } from 'react'
+const Productos = ({products,isLogueado,admin}) => {
+    useEffect(()=>{},[products])
   return (
     <Container>
       {isLogueado?<>
@@ -16,7 +17,9 @@ const Productos = ({products,isLogueado}) => {
             <Card.Title>{p.name}</Card.Title>
             <Card.Text>{p.descripction}</Card.Text>
             <Card.Text>$ {p.price}</Card.Text>
-            <Card.Link href='#'>Añadir la compra</Card.Link>
+            {admin?<Card.Link href={`/admin/editProduct/${p.id}`}>Editar</Card.Link>:
+            <Card.Link href='#'>Añadir la compra</Card.Link>}
+            
             <Card.Link href={`/products/detail/${p.id}`}>Detalle</Card.Link>
             </ListGroup.Item>)}
           </ListGroup>

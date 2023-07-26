@@ -5,6 +5,6 @@ export const PrivateRoutes = ({admin}) => {
   if(admin){
     return <Outlet/>
   }
-  return <Navigate to="/produts"/>
+  return <Navigate to="/"/>
 }
 
