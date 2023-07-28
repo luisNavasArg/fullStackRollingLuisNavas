@@ -57,3 +57,22 @@ export const ingresar=async(user)=>{
     })
     return myUser;
 }
+
+export const methoDeleteOne=(id)=>{
+    try {
+        let productos =axios.delete(`${URL_productos}/${id}`)
+        return productos;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const methUpdate= async(obj,id)=>{
+    console.log(obj,id);
+    try {
+        let editProduct = axios.put(`${URL_productos}/${id}`,obj)
+        return editProduct
+    } catch (error) {
+        console.log(error);
+    }
+}

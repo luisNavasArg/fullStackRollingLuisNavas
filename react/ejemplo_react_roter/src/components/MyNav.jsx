@@ -19,7 +19,7 @@ function MyNav(props) {
          
           <>
             <NavLink to={"/products"} className={'nav-item nav-link'}>Products</NavLink>
-            <NavLink to={"/"} className={'nav-item nav-link'} onClick={logout}>Loguot</NavLink>
+            <NavLink to={"/"} className={'nav-item nav-link'} onClick={logout}>Logout</NavLink>
           </>
           :
           <>

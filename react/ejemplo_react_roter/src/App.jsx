@@ -13,6 +13,7 @@ import {methPost,methGet} from './helpers/index'
 import {PrivateRoutes} from './components/PrivateRoutes'
 import AddProduct from './pages/AddProduct'
 import ProductoDetail from './pages/ProductoDetail'
+import EditProduct from './pages/EditProduct'
 function App() {
   const [products, setProducts] = useState([]);
   const [admin,setAdmin]=useState(false);
@@ -34,14 +35,11 @@ function App() {
     methGet()
     .then(data=>data.data)
     .then(response=>{
-    
     if(response.length != 0){
       setProducts(response)
     }else{
       console.log("no han llegado datos");
     }
-    
-      
     })
   },[])
 
@@ -69,10 +67,11 @@ function App() {
           <Route element={<PrivateRoutes admin={admin}/>}>
             <Route  path="/admin" element={<h1>Admin</h1>}/>
             <Route path="/admin/addProduct" element={<AddProduct />}/>
+            
           </Route>
-          <Route  path="/products" element={<Productos isLogueado={isLogueado} products={products}/>}/>
-          <Route  path="/products/detail/:id" element={<ProductoDetail isLogueado={isLogueado} products={products}/>}/>
-
+          <Route  path="/products" element={<Productos admin={admin} isLogueado={isLogueado} products={products}/>}/>
+          <Route  path="/products/detail/:id" element={<ProductoDetail admin={admin} isLogueado={isLogueado} addProduct={setProducts} products={products}/>}/>
+          <Route path="/admin/editProduct/:id" element={<EditProduct addProduct={setProducts} />}/>
           
         </Routes>
         <Footer></Footer>
