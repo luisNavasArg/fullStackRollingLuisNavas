@@ -33,7 +33,9 @@ function App() {
   useEffect(()=>{
     recuperoUser()
     methGet()
-    .then(data=>data.data)
+    .then(data=>{
+      console.log(data.data);
+      return data.data})
     .then(response=>{
     if(response.length != 0){
       setProducts(response)

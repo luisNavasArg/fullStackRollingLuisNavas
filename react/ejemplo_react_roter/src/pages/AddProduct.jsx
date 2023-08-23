@@ -36,16 +36,16 @@ const AddProduct = () => {
               </Form.Text>
             </FormGroup>
             <FormGroup>
-              <Form.Label>Descripcción</Form.Label>
+              <Form.Label>Descripción</Form.Label>
               <FormControl 
               type='text'
-              {...register("descripction",{
+              {...register("description",{
                 required:"Este campo es obligatorio",
              
               })}
               />
               <Form.Text className="text-danger">
-                {errors.descripction?.message}
+                {errors.description?.message}
               </Form.Text>
             </FormGroup>
             <FormGroup>

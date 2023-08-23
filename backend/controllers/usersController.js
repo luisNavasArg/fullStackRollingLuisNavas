@@ -24,6 +24,7 @@ const update=async(req=request, res=response)=>{
     let passEncrip = bcrypt.hashSync(password,12);
     resto.password= passEncrip;
   }
+
   const usuario = await Usuario.findByIdAndUpdate(id,resto,{new:true});
   res.status(201).json({usuario:usuario,msg:"Usuario actualizo con éxito!"})
 }

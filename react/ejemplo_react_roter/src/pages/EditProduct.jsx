@@ -4,14 +4,20 @@ import {methoGetOne,methUpdate,methGet} from '../helpers/index'
 import { useEffect, useState } from 'react'
 import {useForm} from 'react-hook-form'
 const EditProduct = ({isLogueado,admin,addProduct}) => {
-  const {register,handleSubmit,formState:{errors},reset}=useForm();
+  const {register,handleSubmit,formState:{errors},reset,setValue}=useForm();
     let {id} = useParams();
     const [getOne,setGetOne]=useState([])
     const[volver,setVolver]=useState(false)
     useEffect(() => {
         methoGetOne(id)
         .then((response)=>response.data)
-        .then(data=>setGetOne([data]))
+        .then(data=>{
+          setValue("name",data.name);
+          setValue("description",data.description);
+          setValue("price",data.price);
+          setValue("src",data.src)
+          setGetOne([data])
+        })
     }, [])
   const editProduct=(obj)=>{
     methUpdate(obj,id);
@@ -40,16 +46,16 @@ const EditProduct = ({isLogueado,admin,addProduct}) => {
       </Form.Text>
     </FormGroup>
     <FormGroup>
-      <Form.Label>Descripcción</Form.Label>
+      <Form.Label>Descripción</Form.Label>
       <FormControl 
       type='text'
-      {...register("descripction",{
+      {...register("description",{
         required:"Este campo es obligatorio",
      
       })}
       />
       <Form.Text className="text-danger">
-        {errors.descripction?.message}
+        {errors.description?.message}
       </Form.Text>
     </FormGroup>
     <FormGroup>

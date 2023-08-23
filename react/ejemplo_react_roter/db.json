@@ -135,6 +135,22 @@
       "password": "122332",
       "admin": false,
       "id": 17
+    },
+    {
+      "firstName": "Alejandro",
+      "lastName": "Navas",
+      "email": "endtheworld@gmail.com",
+      "password": "123",
+      "admin": false,
+      "id": 18
+    },
+    {
+      "firstName": "Alejandro",
+      "lastName": "Navas",
+      "email": "endtheworld@gmail.com",
+      "password": "luisNavasa1",
+      "admin": false,
+      "id": 19
     }
   ],
   "products": [
@@ -148,7 +164,7 @@
     {
       "name": "Café y medialunas",
       "descripction": "Dulces, café y medialunas",
-      "price": "650",
+      "price": "6500",
       "src": "https://www.cronista.com/files/image/475/475498/63094b0f74c88.jpg",
       "id": 22
     },

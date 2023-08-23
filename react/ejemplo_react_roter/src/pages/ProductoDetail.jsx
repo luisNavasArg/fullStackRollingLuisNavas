@@ -28,7 +28,7 @@ const ProductoDetail = ({isLogueado,admin,addProduct}) => {
     }
   return (
     <>
-    {volver?<Navigate to="/products" />:
+    {volver?<Navigate to="/products"/>:
     <Container>
       <Card className='m-3 mx-auto'>
       <Card.Title>
@@ -39,7 +39,7 @@ const ProductoDetail = ({isLogueado,admin,addProduct}) => {
         {getOne.map((p,index)=><ListGroup.Item className='d-flex justify-content-around' key={`product${index}`}>
           <Card.Img style={{width:"100px"}} src={p.src} />        
           <Card.Title>{p.name}</Card.Title>
-          <Card.Text>{p.descripction}</Card.Text>
+          <Card.Text>{p.description}</Card.Text>
           <Card.Text>$ {p.price}</Card.Text>
     {admin?
     <Card.Link onClick={deleteOne} >Eliminar</Card.Link>
