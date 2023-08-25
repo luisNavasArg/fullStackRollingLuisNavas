@@ -5,12 +5,16 @@ import { useEffect, useState } from 'react'
 
 const ProductoDetail = ({isLogueado,admin,addProduct}) => {
     let {id} = useParams();
-    const [getOne,setGetOne]=useState([])
+    const [getOne,setGetOne]=useState({})
     const[volver,setVolver]=useState(false)
     useEffect(() => {
         methoGetOne(id)
         .then((response)=>response.data)
-        .then(data=>setGetOne([data]))
+        .then(data=>{
+        
+          setGetOne(data.producto)
+          console.log(data.producto);
+        })
     }, [isLogueado])
     const deleteOne=()=>{
       methoDeleteOne(id);
@@ -36,11 +40,11 @@ const ProductoDetail = ({isLogueado,admin,addProduct}) => {
       </Card.Title>
       <Card.Body>
         <ListGroup >
-        {getOne.map((p,index)=><ListGroup.Item className='d-flex justify-content-around' key={`product${index}`}>
-          <Card.Img style={{width:"100px"}} src={p.src} />        
-          <Card.Title>{p.name}</Card.Title>
-          <Card.Text>{p.description}</Card.Text>
-          <Card.Text>$ {p.price}</Card.Text>
+        <ListGroup.Item className='d-flex justify-content-around'>
+          <Card.Img style={{width:"100px"}} src={getOne.src} />        
+          <Card.Title>{getOne.name}</Card.Title>
+          <Card.Text>{getOne.description}</Card.Text>
+          <Card.Text>$ {getOne.price}</Card.Text>
     {admin?
     <Card.Link onClick={deleteOne} >Eliminar</Card.Link>
     :
@@ -48,7 +52,7 @@ const ProductoDetail = ({isLogueado,admin,addProduct}) => {
           
           <Card.Link href={`/products`}>Volver</Card.Link>
 
-          </ListGroup.Item>)}
+          </ListGroup.Item>
         </ListGroup>
       </Card.Body>
     </Card>

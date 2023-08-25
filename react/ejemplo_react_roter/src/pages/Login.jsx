@@ -11,22 +11,23 @@ const Login = ({admin,setAdmin, MyUser,setUser,setIslogueado,logueado}) => {
   const onSubmit =(user)=>{
       ingresar(user)
       .then(data=>{
-        if(data.length==0){
+        console.log(data.data.user);
+        if(data.data.user==null){
           Swal.fire('¡Usuario o contraseña incorrecto!')
         }else{
-          let {admin,firstName,lastName,email,id} =data[0];
-          setUser(data[0])
-          setAdmin(data[0].admin)
+          let {admin,firstName,lastName,email,id} =data.data.user;
+          setUser(data.data.user)
+          setAdmin(data.data.user.admin)
           setIslogueado(true)
           window.localStorage.setItem("user",JSON.stringify({admin,firstName,lastName,email,id}))
         }
       })
-     
   }
   return (
     <div>
       {logueado?<Navigate to="/products"/>:
-            <Form className='w-50 bg-info p-3 bg-opacity-25' onSubmit={handleSubmit(onSubmit)}> 
+            <Form className='w-50 bg-info p-3 bg-opacity-25' 
+            onSubmit={handleSubmit(onSubmit)}> 
             <FormGroup>
               <Form.Label>Email</Form.Label>
               <FormControl 

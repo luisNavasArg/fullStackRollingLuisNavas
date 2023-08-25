@@ -12,10 +12,11 @@ const EditProduct = ({isLogueado,admin,addProduct}) => {
         methoGetOne(id)
         .then((response)=>response.data)
         .then(data=>{
-          setValue("name",data.name);
-          setValue("description",data.description);
-          setValue("price",data.price);
-          setValue("src",data.src)
+          console.log(data.producto);
+          setValue("name",data.producto.name);
+          setValue("description",data.producto.description);
+          setValue("price",data.producto.price);
+          setValue("src",data.producto.src)
           setGetOne([data])
         })
     }, [])

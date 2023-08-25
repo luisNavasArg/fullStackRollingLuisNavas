@@ -1,5 +1,6 @@
 const URL_productos = import.meta.env.VITE_ENV_URL_PRODUCTS;
 const URL_usuarios = import.meta.env.VITE_ENV_URL_USERS;
+const URL_auth = import.meta.env.VITE_ENV_AUTH;
 
 import axios from 'axios';
 //CRUD create read update delete
@@ -16,15 +17,18 @@ export const methPost= async(obj)=>{
 export const methPostUsers= async(obj)=>{
     obj.admin=false;
     try {
-        axios.post(URL_usuarios,obj)
+        alert(JSON.stringify(obj))
+        axios.post(URL_usuarios+"/createUser",obj)
     } catch (error) {
         console.log(error);
     }
 }
-export const methoGetOne=(id)=>{
+export const methoGetOne=async(id)=>{
     try {
-        let productos =axios.get(`${URL_productos}/${id}`)
-        return productos;
+        let producto =await axios.get(`${URL_productos}/getOneProduct/${id}`)
+     
+        console.log(producto.data.producto)
+        return producto;
     } catch (error) {
         console.log(error);
     }
@@ -32,7 +36,7 @@ export const methoGetOne=(id)=>{
 
 export const  methGet=async()=>{
     try {
-        let productos =axios.get(URL_productos)
+        let productos =axios.get(URL_productos+"/getProducts")
         return productos;
     } catch (error) {
         console.log(error);
@@ -41,21 +45,17 @@ export const  methGet=async()=>{
 
 export const  methGetUsers=async()=>{
     try {
-        let users = await axios.get(URL_usuarios)
+        let users = await axios.get(URL_usuarios+"/getUsers")
         return users;
     } catch (error) {
         console.log(error);
     }
 }
 export const ingresar=async(user)=>{
-    let users = await methGetUsers();
-    let objs = users.data;
-    let myUser = objs.filter((obj)=>{
-        if(obj.email===user.email && obj.password===user.password){
-            return obj;
-        }
-    })
-    return myUser;
+    let usr = await axios.post(URL_auth,user);
+    return usr;
+    
+    
 }
 
 export const methoDeleteOne=(id)=>{
@@ -66,9 +66,7 @@ export const methoDeleteOne=(id)=>{
         console.log(error);
     }
 }
-
 export const methUpdate= async(obj,id)=>{
-    console.log(obj,id);
     try {
         let editProduct = axios.put(`${URL_productos}/${id}`,obj)
         return editProduct

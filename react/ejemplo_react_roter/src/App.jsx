@@ -27,15 +27,12 @@ function App() {
       setAdmin(usuario.admin)
       setIslogueado(true)
     }
-    
-
   }
   useEffect(()=>{
     recuperoUser()
     methGet()
     .then(data=>{
-      console.log(data.data);
-      return data.data})
+      return data.data.data})
     .then(response=>{
     if(response.length != 0){
       setProducts(response)
