@@ -10,9 +10,12 @@ const index =async(req, res)=>{
 }
 const getOne=async(req, res)=>{
   const {id}=req.params;
+  
   try {
     const producto = await Producto.findById(id);
+    console.log(producto);
     return res.status(200).json({producto})
+
   } catch (error) {
     return res.json({error})
   }
